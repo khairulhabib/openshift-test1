@@ -3,6 +3,7 @@ package com.btpnsyariah.os;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
 @SpringBootApplication
@@ -13,8 +14,8 @@ public class SpringbootOcApplication {
 		SpringApplication.run(SpringbootOcApplication.class, args);
 	}
 
-	@GetMapping(value = "/hello")
-	public String hello(String hello){
+	@GetMapping(value = "/hello/{name}")
+	public String hello(@PathVariable String hello){
 		return "Springboot " + hello;
 	}
 }
