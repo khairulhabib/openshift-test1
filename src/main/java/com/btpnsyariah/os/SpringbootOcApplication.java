@@ -15,7 +15,7 @@ public class SpringbootOcApplication {
 	}
 
 	@GetMapping(value = "/hello/{name}")
-	public String hello(@PathVariable String hello){
-		return "Springboot " + hello;
+	public String hello(@PathVariable String name){
+		return "Springboot " + name;
 	}
 }
