@@ -14,4 +14,9 @@ public class SimpleController {
     public String hello(@PathVariable String name){
         return "Springboot " + name;
     }
+
+    @GetMapping(value = "/hello1/{string}")
+    public String hello1(@PathVariable String string){
+        return "Some new String " + string;
+    }
 }
